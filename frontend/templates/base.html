@@ -10,15 +10,35 @@
     <link rel="stylesheet" href="{% static 'css/cus.css' %}">
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm fixed-top">
+  <div class="container">
+
+    <a class="navbar-brand fw-bold" href="{% url 'home' %}">
+      Student Management
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">HOME</a>
-        <a class="nav-link active" aria-current="page" href="{% url 'add' %}">ADD STUDENTS</a>
-        <a class="nav-link" href="{% url 'show' %}">VIEW STUDENTS</a>
-        <a class="nav-link" href="{% url 'loginpage' %}">LOGOUT</a>
+
+      <div class="navbar-nav mx-auto">
+        <a class="nav-link px-3" href="{% url 'home' %}">🏠 Home</a>
+        <a class="nav-link px-3" href="{% url 'add' %}">➕ Add Students</a>
+        <a class="nav-link px-3" href="{% url 'show' %}">📋 View Students</a>
       </div>
+
+      <div class="navbar-nav">
+        <a class="btn btn-outline-light btn-sm" href="{% url 'loginpage' %}">
+          Logout
+        </a>
+      </div>
+
     </div>
+
   </div>
 </nav>
     {% block content %}

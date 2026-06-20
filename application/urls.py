@@ -19,7 +19,7 @@ urlpatterns = [
     path('kevin/',kevin,name='kevin'),
     path('kannan/',kannan,name='kannan'),
     path('sairam/',sairam,name='sairam'),
-    path('bala/',software,name='bala'),
+    path('bala/',bala,name='bala'),
     path('search/',search,name="search"),
   
 ]
