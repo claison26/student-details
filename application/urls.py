@@ -20,5 +20,6 @@ urlpatterns = [
     path('kannan/',kannan,name='kannan'),
     path('sairam/',sairam,name='sairam'),
     path('bala/',software,name='bala'),
+    path('search/',search,name="search"),
   
 ]

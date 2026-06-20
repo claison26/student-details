@@ -98,5 +98,13 @@ def bala(request):
     return render(request,"show.html",{"products":will})
 
 
+def search(request):
+    will=Student.objects.all()
+    if request.method=="POST":
+        name=request.POST.get("name")
+        will=Student.objects.filter(name__icontains=name)
+    return render(request,"show.html",{"products":will})
+    
+
 
 
