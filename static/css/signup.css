@@ -1,0 +1,38 @@
+body{
+    margin:0;
+    padding:20px;
+    background:#f4f6f9;
+    font-family:Arial, sans-serif;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+}
+
+.signup-container{
+    width:100%;
+    max-width:500px;
+}
+
+.signup-form{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.signup-form h2{
+    font-weight:bold;
+}
+
+.error-msg{
+    color:red;
+    margin-bottom:15px;
+}
+
+.form-control{
+    border-radius:8px;
+}

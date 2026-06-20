@@ -1,0 +1,242 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<br><br><br><br><br>
+
+<!-- Row 1: Total Students -->
+<div class="stat-row">
+  <a href="{% url 'total' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-purple" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M23 21v-2a4 4 0 00-3-3.87"/>
+            <path d="M16 3.13a4 4 0 010 7.75"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ total }}</div>
+      <div class="stat-label">Total Students</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="80"></div></div>
+    </div>
+  </a>
+</div>
+
+<br><br><br><br><br>
+
+<!-- Row 2: Morning, Afternoon, Evening -->
+<div class="stat-row">
+  <a href="{% url 'morning' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-teal" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ morning }}</div>
+      <div class="stat-label">Morning Students</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="40"></div></div>
+    </div>
+  </a>
+
+  <a href="{% url 'afternoon' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-coral" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ afternoon }}</div>
+      <div class="stat-label">Afternoon Students</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="20"></div></div>
+    </div>
+  </a>
+
+  <a href="{% url 'evening' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-pink" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ evening }}</div>
+      <div class="stat-label">Evening Students</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="60"></div></div>
+    </div>
+  </a>
+</div>
+
+<br><br><br><br><br>
+
+<!-- Row 3: Department wise Students -->
+<div class="stat-row">
+  <a href="{% url 'software' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-teal" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ software }}</div>
+      <div class="stat-label">Software Students</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="40"></div></div>
+    </div>
+  </a>
+
+  <a href="{% url 'accounts' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-coral" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ accounts }}</div>
+      <div class="stat-label">Accounts Students</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="20"></div></div>
+    </div>
+  </a>
+
+  <a href="{% url 'multimedia' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-pink" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ multimedia }}</div>
+      <div class="stat-label">Multimedia Students</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="60"></div></div>
+    </div>
+  </a>
+
+  <a href="{% url 'hardware' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-purple" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ hardware }}</div>
+      <div class="stat-label">Hardware Students</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="60"></div></div>
+    </div>
+  </a>
+</div>
+
+<br><br><br><br><br>
+
+<!-- Row 4: Staff wise Students -->
+<div class="stat-row">
+  <a href="{% url 'kevin' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-purple" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ kevin }}</div>
+      <div class="stat-label">Kevin</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="50"></div></div>
+    </div>
+  </a>
+
+  <a href="{% url 'kannan' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-teal" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ kannan }}</div>
+      <div class="stat-label">Kannan</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="30"></div></div>
+    </div>
+  </a>
+
+  <a href="{% url 'sairam' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-coral" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ sairam }}</div>
+      <div class="stat-label">Sairam</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="70"></div></div>
+    </div>
+  </a>
+
+  <a href="{% url 'bala' %}" style="flex:1; display:flex;">
+    <div class="stat-card card-pink" style="width:100%;">
+      <div class="stat-top">
+        <div class="stat-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+            <circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <span class="stat-trend">&#8679; 12%</span>
+      </div>
+      <div class="stat-value">{{ bala }}</div>
+      <div class="stat-label">Bala</div>
+      <div class="stat-bar-wrap"><div class="stat-bar" data-w="45"></div></div>
+    </div>
+  </a>
+</div>
+
+<script>
+  window.addEventListener('load', function () {
+    document.querySelectorAll('.stat-bar').forEach(function (bar) {
+      bar.style.width = bar.getAttribute('data-w') + '%';
+    });
+  });
+</script>
+
+{% endblock %}
